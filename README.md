@@ -332,7 +332,7 @@ Contributions that improve educational value or safety features are welcome. Pul
 
 ## License
 
-MIT License - See LICENSE file for details
+GNU GENERAL PUBLIC LICENSE - See [LICENSE file](./LICENSE) for details
 
 ## Disclaimer
 
