@@ -1,6 +1,6 @@
-# go-loadtest
+# simple-loadtest-go
 
-A professional HTTP load testing tool written in Go for ecommerce and web applications. Includes predefined profiles for different traffic scenarios.
+An educational HTTP load testing tool written in Go for ecommerce and web applications. Includes predefined profiles for different traffic scenarios.
 
 ## ⚠️ LEGAL WARNING
 
