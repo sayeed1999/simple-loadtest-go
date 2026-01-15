@@ -1,8 +1,10 @@
 package config
 
 import (
+	"fmt"
 	"sync"
 	"time"
+	"net/url"
 )
 
 // Test profiles for different scenarios
@@ -39,4 +41,33 @@ type Stats struct {
 	TotalLatency    int64
 	StartTime       time.Time
 	EndTime         time.Time
+}
+
+func (cfg *Config) ValidateConfig() error {
+	if cfg.URL == "" {
+		return fmt.Errorf("URL is required (use -url flag)")
+	}
+
+	parsedURL, err := url.Parse(cfg.URL)
+	if err != nil {
+		return fmt.Errorf("invalid URL: %v", err)
+	}
+
+	if parsedURL.Scheme != "http" && parsedURL.Scheme != "https" {
+		return fmt.Errorf("URL must use http or https scheme")
+	}
+
+	if cfg.Requests < 1 {
+		return fmt.Errorf("requests must be at least 1")
+	}
+
+	if cfg.RPS < 1 {
+		return fmt.Errorf("RPS must be at least 1")
+	}
+
+	if cfg.Concurrency < 1 {
+		return fmt.Errorf("concurrency must be at least 1")
+	}
+
+	return nil
 }
