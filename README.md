@@ -65,11 +65,13 @@ The tool includes 4 predefined profiles for common ecommerce scenarios:
 git clone https://github.com/sayeed1999/simple-loadtest-go.git
 cd simple-loadtest-go
 
-# Build (In Windows)
-go build -o loadtest.exe main.go
+# Build (For Windows)
+GOOS=windows go build -o ./output/loadtest.exe main.go
 
 # Build (In Linux/Mac)
-go build -o loadtest main.go
+GOOS=linux go build -o ./output/loadtest main.go
+
+## The GOOS param is not necessary when building for same OS from same OS.
 ```
 
 ## Usage
