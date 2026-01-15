@@ -2,9 +2,9 @@ package config
 
 import (
 	"fmt"
+	"net/url"
 	"sync"
 	"time"
-	"net/url"
 )
 
 // Test profiles for different scenarios
