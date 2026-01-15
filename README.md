@@ -62,10 +62,13 @@ The tool includes 4 predefined profiles for common ecommerce scenarios:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/go-loadtest.git
-cd go-loadtest
+git clone https://github.com/sayeed1999/simple-loadtest-go.git
+cd simple-loadtest-go
 
-# Build
+# Build (In Windows)
+go build -o loadtest.exe main.go
+
+# Build (In Linux/Mac)
 go build -o loadtest main.go
 ```
 
